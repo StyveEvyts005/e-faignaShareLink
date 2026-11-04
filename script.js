@@ -38,7 +38,7 @@ btnGetLink.addEventListener("click",()=>{
     localStorage.setItem("nom", nomDuCompte.value);
     localStorage.setItem("numero", numero.value);
 
-    let lien = `http://localhost/TP/e-faigna/index2.php?nom=${nomDuCompte.value}&&num=${numero.value}&&mont=${montant.value}&&op=${operateur}`;
+    let lien = `https://bootikapay.byethost14.com/e-faignyPay/index2.php?nom=${nomDuCompte.value}&&num=${numero.value}&&mont=${montant.value}&&op=${operateur}`;
     spanLink.textContent = lien;
 
 });
