@@ -33,12 +33,14 @@ nomDuCompte.value = nomSaved;
 numero.value = numeroSaved;
 montant.value = 0;
 
+let nomTab = nomDuCompte.value.split(" ");
+
 const spanLink = document.querySelector(".lien");
 btnGetLink.addEventListener("click",()=>{
     localStorage.setItem("nom", nomDuCompte.value);
     localStorage.setItem("numero", numero.value);
 
-    let lien = `https://bootikapay.byethost14.com/e-faignyPay/index2.php?nom=${nomDuCompte.value}&&num=${numero.value}&&mont=${montant.value}&&op=${operateur}`;
+    let lien = `https://bootikapay.byethost14.com/e-faignyPay/index2.php?nom=${nomTab.join("%")}&&num=${numero.value}&&mont=${montant.value}&&op=${operateur}`;
     spanLink.textContent = lien;
 
 });
